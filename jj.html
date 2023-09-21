@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protect Yourself from Juice Jacking Attacks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0078d4;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: #0078d4;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+
+        .section-image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="javascript:void(0);" onclick="toggleSection('whatIsJuiceJacking')">What is Juice Jacking?</a>
+        <a href="javascript:void(0);" onclick="toggleSection('howToProtect')">How to Protect Yourself</a>
+        <a href="javascript:void(0);" onclick="toggleSection('spreadTheWord')">Spread the Word</a>
+    </div>
+
+    <header>
+        <h1>Protect Yourself from Juice Jacking Attacks</h1>
+    </header>
+
+    <div class="container">
+        <div id="whatIsJuiceJacking">
+            <h2>What is Juice Jacking?</h2>
+            <p>Juice jacking is a cyberattack that occurs when an attacker tampers with public charging stations or USB ports to install malware or steal data from your device while it's connected for charging.</p>
+            <img class="section-image" src="data:image/jpeg;base64,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" alt="Juice Jacking Illustration 1">
+        </div>
+
+        <div id="howToProtect" style="display: none;">
+            <h2>How to Protect Yourself:</h2>
+            <ul>
+                <li>Use your own charger and power adapter whenever possible.</li>
+                <li>Avoid using public charging stations in airports, hotels, and other public places.</li>
+                <li>Invest in a portable power bank for on-the-go charging.</li>
+                <li>Consider using a data blocker or USB condom to prevent data exchange when charging in unfamiliar places.</li>
+                <li>Keep your device's operating system and security software up to date.</li>
+                <li>Stay vigilant and report any suspicious charging stations to authorities.</li>
+            </ul>
+            <img class="section-image" src="https://assets.website-files.com/5ff66329429d880392f6cba2/61e9812cde2f6471f4373917_Juice%20Jacking%20work.jpg" alt="Juice Jacking Illustration 2">
+        </div>
+
+        <div id="spreadTheWord" style="display: none;">
+            <h2>Spread the Word!</h2>
+            <p>Help protect your friends and family from juice jacking attacks by sharing this information with them. Awareness is key to staying safe in today's digital world.</p>
+            <img class="section-image" src="data:image/jpeg;base64,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" alt="Juice Jacking Illustration 3">
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            var sections = ['whatIsJuiceJacking', 'howToProtect', 'spreadTheWord'];
+
+            for (var i = 0; i < sections.length; i++) {
+                var section = document.getElementById(sections[i]);
+                if (sections[i] === sectionId) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
